@@ -1,5 +1,56 @@
-*,
-*::after,
-*::before {
+* {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 60%;
+}
+
+.bt {
+  border-bottom: 1px solid #ccc;
+}
+
+.bayan__list {
+  list-style: none;
+}
+
+.cross {
+  /* display: block; */
+  transform: rotate(45deg);
+}
+
+.bayan__item > img {
+  display: none;
+}
+
+.bayan__item > img:target {
+  display: block;
+}
+
+#comments:not(:target) {
+  display: none;
+}
+#comments:target {
+  display: block;
+}
+
+@media screen and (min-width: 820px) {
+}
+
+@media screen and (min-width: 1920px) {
 }
