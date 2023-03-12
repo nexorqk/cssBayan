@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.bayan__list {
+  list-style: none;
+}
+
+.bt {
+  border-top: 0.1rem solid #ccc;
+}
+
+.bayan__item {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  color: #4285f4;
+  font-size: 2rem;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.status-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: #000;
+  transition: all 0.3s;
+}
+
+.input {
+  appearance: none;
+}
+
+.input:checked ~ .label .status-icon {
+  transform: rotate(45deg);
+}
+
+.mem-img {
+  display: block;
+  max-height: 0;
+  width: 50%;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+.input:checked .label {
+  color: #000;
+}
+
+.input:checked ~ .img-content .mem-img {
+  max-height: 100vh;
+}
+
+input:checked ~ .label {
+  color: #000;
+}
+
+@media (hover: hover) {
+  .bayan__list:hover .label {
+    color: #000;
+  }
+
+  .bayan__list:hover .label > .status-icon {
+    display: inline-block;
+  }
+
+  .bayan__item:hover > .img-content .mem-img {
+    max-height: 100vh;
+  }
+
+  .bayan__item:hover > .label .status-icon {
+    transform: rotate(45deg);
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .container {
+    width: 70%;
+  }
+
+  .input:checked ~ .label > .status-icon {
+    display: inline-block;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .label {
+    font-size: 1.5rem;
+  }
+
+  .mem-img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .status-icon {
+    font-size: 1rem;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .mem-img {
+    width: 90%;
+  }
+}
