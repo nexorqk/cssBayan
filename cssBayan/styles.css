@@ -35,6 +35,7 @@ ul {
 
 .bayan__item {
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .label {
@@ -56,7 +57,7 @@ ul {
   appearance: none;
 }
 
-.input:checked ~ .status-icon {
+.input:checked ~ .label .status-icon {
   transform: rotate(45deg);
 }
 
@@ -76,24 +77,24 @@ ul {
   max-height: 100vh;
 }
 
-@media (hover: hover) {
-  input:checked ~ .label {
-    color: #000;
-  }
+input:checked ~ .label {
+  color: #000;
+}
 
+@media (hover: hover) {
   .bayan__list:hover .status-icon {
     display: inline-block;
+  }
+
+  .bayan__item:hover ~ .label .status-icon {
+    rotate: (45deg);
   }
 
   .bayan__list:hover .label {
     color: #000;
   }
 
-  .bayan__item:hover ~ .status-icon {
-    rotate: (45deg);
-  }
-
-  .input:hover ~ .mem-img {
+  .bayan__item:hover .input ~ .mem-img {
     max-height: 100vh;
   }
 }
