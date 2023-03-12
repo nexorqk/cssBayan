@@ -43,13 +43,14 @@ ul {
   justify-content: space-between;
   color: rgb(0, 0, 212);
   font-size: 2rem;
-  transition: all 0.3s;
+  transition: color 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .status-icon {
   display: none;
   font-size: 1.5rem;
+  color: #000;
   transition: all 0.3s;
 }
 
@@ -69,11 +70,11 @@ ul {
   transition: all 0.3s;
 }
 
-.input:checked ~ .label {
+.input:checked .label {
   color: #000;
 }
 
-.input:checked ~ .mem-img {
+.input:checked ~ .img-content .mem-img {
   max-height: 100vh;
 }
 
@@ -82,31 +83,19 @@ input:checked ~ .label {
 }
 
 @media (hover: hover) {
-  .bayan__list:hover .status-icon {
-    display: inline-block;
-  }
-
-  .bayan__item:hover ~ .label .status-icon {
-    rotate: (45deg);
-  }
-
   .bayan__list:hover .label {
     color: #000;
   }
 
-  .bayan__item:hover .input ~ .mem-img {
+  .bayan__list:hover .label > .status-icon {
+    display: inline-block;
+  }
+
+  .bayan__item:hover > .img-content .mem-img {
     max-height: 100vh;
   }
-}
 
-@media screen and (max-width: 820px) {
-  .container {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .container {
-    width: 100%;
+  .bayan__item:hover > .label .status-icon {
+    transform: rotate(45deg);
   }
 }
