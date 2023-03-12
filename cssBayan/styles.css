@@ -10,47 +10,27 @@ ul {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
 }
 
 .container {
-  width: 60%;
+  width: 50%;
 }
 
 .bt {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.1rem solid #ccc;
 }
 
 .bayan__list {
   list-style: none;
 }
 
-.cross {
-  /* display: block; */
-  transform: rotate(45deg);
+.input {
+  appearance: none;
 }
 
-.bayan__item > img {
-  display: none;
-}
-
-.bayan__item > img:target {
-  display: block;
-}
-
-#comments:not(:target) {
-  display: none;
-}
-#comments:target {
-  display: block;
-}
-
-@media screen and (min-width: 820px) {
-}
-
-@media screen and (min-width: 1920px) {
+.label {
+  font-size: 1.5rem;
 }
